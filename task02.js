@@ -6,10 +6,14 @@
 const userInput = "42";
 // Try changing to "hello", 10, null, NaN
 
-
-
-if (!isNaN(userInput)) {
+if (typeof userInput === "number" && !isNaN(userInput)) {
   console.log("It's a number");
 } else {
-  console.log("It's not a number.");
+  console.log("It's not a number");
+}
+
+if (typeof userInput !== 'number' || isNaN(userInput)) {
+  console.log("It's not a number");
+} else {
+  console.log("It's a number");
 }
